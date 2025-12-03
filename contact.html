@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+<link href="style1.css" rel="stylesheet" type="text/css" />
+
+  
+   <title>Contact Milagro Deluge</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <style>
+    /*puts a border around the body of page*/
+    .body1{
+      max-width: 1000px;
+    max-height: 7000px;
+   
+    margin: auto;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    display: table;
+    clear: both;
+  
+  }
+  /*css for form and form box*/
+  .contact-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.social-media {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-media ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.social-media ul li a:hover {
+    color: #4CAF50;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+</style>
+
+<script>
+  //javascript for form regulation
+  function validateForm() {
+    // Name validation
+    var name = document.getElementById("name").value;
+    if (name == "") {
+        alert("Name must be filled out.");
+        return false;
+    }
+
+    // Email validation
+    var email = document.getElementById("email").value;
+    var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (email == "" || !email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    // Subject validation
+    var subject = document.getElementById("subject").value;
+    if (subject == "") {
+        alert("Subject must be filled out.");
+        return false;
+    }
+
+    // Message validation
+    var message = document.getElementById("message").value;
+    if (message == "") {
+        alert("Message cannot be empty.");
+        return false;
+    }
+
+    // If all validations pass, the form is submitted.
+    alert("Form submitted successfully!");
+    return true;
+}
+</script>
+<!--Links for header icon(logo seen in tab)-->
+
+<!-- Favicon for 16x16 size, commonly used for small browser tabs and address bars -->
+<link rel="icon" sizes="16x16" href="favicon-16x16.png">
+
+<!-- Favicon for 32x32 size, often used for standard browser tabs -->
+<link rel="icon" sizes="32x32" href="favicon-32x32.png">
+
+<!-- Favicon for 48x48 size, used in certain desktop applications or larger contexts -->
+<link rel="icon" sizes="48x48" href="favicon-48x48.png">
+
+<!-- Favicon for 192x192 size, typically used for Android Chrome when adding a website to the home screen -->
+<link rel="icon" sizes="192x192" href="favicon-192x192.png">
+
+<!-- Favicon for 512x512 size, ideal for high-resolution devices and progressive web apps (PWAs) -->
+<link rel="icon" sizes="512x512" href="favicon-512x512.png">
+   </head>
+
+<body>
+
+<img  src="welcomebanner.png" alt="welcome banner" class="imgbanner" align= "center"/>
+
+   <!-- Navigation bar container using an unordered list -->
+<ul class="ult">
+  <!-- Active list item for the current page (Homepage) -->
+  <li class="active lit">
+    <a href="homepage.html">Homepage</a>
+  </li>
+  <!-- List item linking to the "Future Milagro" page -->
+  <li class="lit">
+    <a href="future.html">Future Milagro!</a>
+  </li>
+  <!-- List item linking to the "About Me" page -->
+  <li class="lit">
+    <a href="AboutMe.html">About Me</a>
+  </li>
+  <!-- List item linking to the "Education" page -->
+  <li class="lit">
+    <a href="Education.html">Education</a>
+  </li>
+  <!-- List item linking to the "Contact Me" page -->
+  <li class="lit">
+    <a href="contact.html">Contact Me</a>
+  </li>
+</ul>
+
+<div class="body1"> <!--class to create a border around body-->
+<h1 class="mainheader">Milagro Deluge: Contact</h1>
+<br>
+<center>
+<h3 style="font-family:georgia; margin:20px;">If you'd like to get in touch with me, 
+  feel free to reach out through the contact options provided below.</h3>
+</center>
+<div class="contact-container" id="footer">
+  <h1>Contact Me</h1>
+  <!-- Contact Form -->
+  <form id="contactForm" onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" placeholder="Enter the subject" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+
+      <button type="submit">Submit</button>
+  </form>
+
+<!-- Social Media Links -->
+<div class="social-media">
+  <h3>Contact me via Social Media:</h3>
+  <div class= rap2>
+    <p><a href="https://www.facebook.com">
+<img src="fb.png" alt="facebook" width="85" height="85" class="logo1"></a>
+    
+     <a href="https://www.instagram.com">
+<img src="insta.png" alt="instagram" width="85" height="85" class="logo2"></a>
+    
+      <a href="https://www.twitter.com">
+<img src="twit.png" alt="twitter" width="85" height="85" class="logo3"></a></p>
+
+    </div>
+</div>
+
+   <!-- Email Address (simulated) -->
+   <p>Or reach me directly at: <a href="mailto:MilagroD@gmail.com">MilagroD@gmail.com</a></p>
+  </div>
+
+ </div>
+
+ </body>
+ </html>
+ 
